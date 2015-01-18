@@ -1,0 +1,43 @@
+Presentation of the little shiny app
+========================================================
+author: Alex Noll
+date: 17/01/2015
+
+Description
+========================================================
+
+App calculates expected wage from user's personal data:
+
+- Age?
+- Education?
+- Jobclass (Industrial or Information)?
+- Health?
+- Health Insurance Plan?
+
+Data
+========================================================
+Data for linear model from "Wage" dataset in "ISLR" package.
+
+Data set consisting of 3000 observations and 12 variables.
+
+We use only the five variables from previous slide.
+
+Linear model
+========================================================
+Fit linear regression model relating wage to these five variables
+
+```r
+library(ggplot2)
+data(diamonds)
+fit <- lm(price ~ carat, data=diamonds)
+```
+Plot of linear model versus observed prices:
+
+![plot of chunk unnamed-chunk-2](Documentation-figure/unnamed-chunk-2-1.png) 
+
+Comments
+======================================================
+
+* Did not include prediction interval (this would show that model performs poorly) --> BAD
+* Other machine learning algorithms made better predictions, but are slower
+* For good prediction, need better data (which job, job experience, which college degree, etc.)
